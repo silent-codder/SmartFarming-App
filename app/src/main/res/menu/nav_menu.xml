@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/home"
+        android:icon="@drawable/home_icon"
+        android:title="HOME"
+        tools:ignore="HardcodedText" />
+    <item android:id="@+id/cart"
+        android:icon="@drawable/cart"
+        android:title="CART"
+        tools:ignore="HardcodedText" />
+    <item android:id="@+id/notification"
+        android:icon="@drawable/notification_icon"
+        android:title="NOTIFICATION"
+        tools:ignore="HardcodedText" />
+    <item android:id="@+id/setting"
+        android:icon="@drawable/setting"
+        android:title="SETTING"
+        tools:ignore="HardcodedText" />
+
+
+</menu>

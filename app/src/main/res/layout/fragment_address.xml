@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_marginStart="20dp"
+    android:layout_marginEnd="20dp"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Address"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/candal"
+        android:textColor="@color/secondary"
+        android:textSize="17sp"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/addressLineText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Address Line *"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/candal"
+        android:layout_below="@+id/text"
+        tools:ignore="HardcodedText" />
+    <EditText
+        android:id="@+id/addressLine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="address line"
+        android:textColor="@color/regular"
+        android:fontFamily="@font/candal"
+        android:layout_below="@id/addressLineText"
+        tools:ignore="HardcodedText" />
+    <TextView
+        android:id="@+id/cityText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="City *"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/candal"
+        android:layout_below="@+id/addressLine"
+        tools:ignore="HardcodedText" />
+    <EditText
+        android:id="@+id/city"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="city"
+        android:textColor="@color/regular"
+        android:fontFamily="@font/candal"
+        android:layout_below="@id/cityText"
+        tools:ignore="HardcodedText" />
+    <TextView
+        android:id="@+id/stateText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="State *"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/candal"
+        android:layout_below="@+id/city"
+        tools:ignore="HardcodedText" />
+    <EditText
+        android:id="@+id/state"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="state"
+        android:textColor="@color/regular"
+        android:fontFamily="@font/candal"
+        android:layout_below="@id/stateText"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/pin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pin code *"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/candal"
+        android:layout_below="@+id/state"
+        tools:ignore="HardcodedText" />
+    <EditText
+        android:id="@+id/pinCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="pin code"
+        android:maxLength="6"
+        android:textColor="@color/regular"
+        android:fontFamily="@font/candal"
+        android:layout_below="@id/pin"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/btnAddAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pinCode"
+        android:layout_marginTop="30dp"
+        android:text="Add Address"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:fontFamily="@font/candal"
+        tools:ignore="HardcodedText" />
+
+</RelativeLayout>
+

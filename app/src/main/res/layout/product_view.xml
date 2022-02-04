@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="170dp"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    app:cardElevation="5dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="10dp">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/productPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="₹ 25"
+            android:fontFamily="@font/candal"
+            android:textColor="@color/primary"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:background="@drawable/edit_bg"
+            android:textSize="20sp"
+            tools:ignore="HardcodedText" />
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="40dp"
+            android:indeterminateTint="@color/normal"
+            android:layout_below="@id/productPrice"/>
+
+        <ImageView
+            android:id="@+id/productImg"
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/productPrice"
+            android:layout_width="120dp"
+            android:scaleType="centerCrop"
+            android:layout_centerHorizontal="true"
+            android:layout_height="120dp"/>
+        <TextView
+            android:id="@+id/productName"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="@color/secondary"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/productWeight"
+            android:fontFamily="@font/candal"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/productWeight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="500 gm"
+            android:textSize="13sp"
+            android:layout_below="@id/productImg"
+            android:fontFamily="@font/candal"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/regular"
+            tools:ignore="HardcodedText" />
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:contentPadding="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="10dp"
+    android:layout_marginStart="10dp"
+    android:layout_marginEnd="10dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="3dp">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/textTotal"
+            android:textSize="17sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Order Total : "
+            android:fontFamily="@font/candal"
+            tools:ignore="HardcodedText" />
+        <TextView
+            android:id="@+id/Total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="₹ 1000"
+            android:textSize="17sp"
+            android:layout_toRightOf="@id/textTotal"
+            android:layout_marginStart="5dp"
+            android:fontFamily="@font/candal"
+            tools:ignore="HardcodedText" />
+        <TextView
+            android:id="@+id/date"
+            android:layout_marginTop="1dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mar 20 ,2021"
+            android:layout_below="@id/textTotal"
+            tools:ignore="HardcodedText" />
+        <TextView
+            android:id="@+id/productCount"
+            android:layout_marginTop="1dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2 Products"
+            android:layout_toRightOf="@id/date"
+            android:layout_marginStart="10dp"
+            android:layout_below="@id/textTotal"
+            tools:ignore="HardcodedText" />
+
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/pending_order"
+            android:layout_below="@id/date"/>
+
+        <TextView
+            android:id="@+id/status"
+            android:layout_toRightOf="@id/icon"
+            android:layout_below="@id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="7dp"
+            android:text="Pending Order"
+            android:textColor="#ECBC13"
+            tools:ignore="HardcodedText" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_arrow_forward_ios_24"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"/>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:layout_marginBottom="56dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragment.ProductViewFragment">
+
+   <androidx.cardview.widget.CardView
+       android:id="@+id/cart"
+       android:visibility="visible"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_margin="10dp"
+       app:cardElevation="5dp"
+       app:cardCornerRadius="10dp"
+       app:contentPadding="10dp">
+
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+
+           <de.hdodenhof.circleimageview.CircleImageView
+               android:id="@+id/productImg"
+               android:layout_width="220dp"
+               android:layout_height="220dp"
+               android:layout_marginTop="5dp"
+               android:src="@color/normal"
+               android:layout_marginBottom="5dp"
+               android:layout_below="@id/productWeight"
+               android:layout_centerHorizontal="true"/>
+
+           <TextView
+               android:id="@+id/productName"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Mauli Special Bhel"
+               android:fontFamily="@font/candal"
+               android:layout_centerHorizontal="true"
+               android:layout_marginTop="10dp"
+               android:textSize="20sp"
+               android:textColor="@color/secondary"
+               tools:ignore="HardcodedText" />
+           <TextView
+               android:id="@+id/productPrice"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="₹ 25"
+               android:fontFamily="@font/candal"
+               android:textSize="25sp"
+               android:textColor="@color/primary"
+               android:layout_below="@id/productImg"
+               android:layout_marginTop="2dp"
+               android:layout_centerHorizontal="true"
+               tools:ignore="HardcodedText" />
+           <TextView
+               android:id="@+id/productWeight"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="500 gm"
+               android:layout_below="@id/productName"
+               android:layout_marginTop="1dp"
+               android:layout_centerHorizontal="true"
+               android:textSize="13sp"
+               android:layout_marginStart="10dp"
+               android:fontFamily="@font/candal"
+               android:textColor="@color/regular"
+               tools:ignore="HardcodedText" />
+
+
+           <RelativeLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="10dp"
+               android:layout_below="@id/productPrice"
+               android:gravity="end">
+
+
+               <ImageView
+                   android:layout_width="40dp"
+                   android:layout_height="40dp"
+                   android:src="@drawable/ic_minus"
+                   android:layout_toLeftOf="@id/count"
+                   android:id="@+id/btnMinus"/>
+               <TextView
+                   android:id="@+id/count"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="1"
+                   android:layout_marginEnd="5dp"
+                   android:textColor="@color/secondary"
+                   android:textSize="27sp"
+                   android:fontFamily="@font/candal"
+                   android:layout_toLeftOf="@id/btnAdd"
+                   android:layout_marginStart="15dp"
+                   tools:ignore="HardcodedText" />
+               <ImageView
+                   android:layout_width="40dp"
+                   android:layout_height="40dp"
+                   android:src="@drawable/ic_add"
+                   android:layout_marginStart="10dp"
+                   android:layout_alignParentRight="true"
+                   android:id="@+id/btnAdd"/>
+
+               <TextView
+                   android:id="@+id/text"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="₹"
+                   android:textColor="@color/secondary"
+                   android:fontFamily="@font/candal"
+                   android:textSize="20sp"
+                   android:layout_marginStart="30dp"
+                   tools:ignore="HardcodedText" />
+               <TextView
+                   android:id="@+id/PriceCount"
+                   android:layout_toRightOf="@id/text"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="25"
+                   android:textColor="@color/secondary"
+                   android:fontFamily="@font/candal"
+                   android:textSize="20sp"
+                   android:layout_marginStart="3dp"
+                   tools:ignore="HardcodedText" />
+               <TextView
+                   android:id="@+id/Count"
+                   android:layout_toRightOf="@id/PriceCount"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="x 1"
+                   android:layout_marginTop="3dp"
+                   android:fontFamily="@font/candal"
+                   android:textSize="16sp"
+                   android:layout_marginStart="3dp"
+                   tools:ignore="HardcodedText" />
+
+               <TextView
+                   android:id="@+id/priceCount"
+                   android:layout_marginStart="20dp"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text=""
+                   android:layout_below="@id/PriceCount"
+                   android:textColor="@color/secondary"
+                   android:fontFamily="@font/candal"
+                   android:textSize="25sp"
+                   android:background="@drawable/search_bg"
+                   android:paddingStart="15dp"
+                   android:paddingEnd="15dp"
+                   android:layout_marginTop="10dp"
+                   tools:ignore="HardcodedText" />
+
+               <Button
+                   android:id="@+id/btnAddCard"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Add to card"
+                   android:layout_below="@id/count"
+                   android:layout_alignParentRight="true"
+                   android:fontFamily="@font/candal"
+                   tools:ignore="HardcodedText" />
+
+           </RelativeLayout>
+
+       </RelativeLayout>
+
+   </androidx.cardview.widget.CardView>
+
+<!--    <androidx.cardview.widget.CardView-->
+<!--        android:id="@+id/card2"-->
+<!--        android:visibility="visible"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_margin="10dp"-->
+<!--        app:cardElevation="2dp"-->
+<!--        app:cardCornerRadius="10dp"-->
+<!--        app:contentPadding="10dp"-->
+<!--        android:layout_below="@id/cart">-->
+
+
+
+<!--    </androidx.cardview.widget.CardView>-->
+
+
+
+</RelativeLayout>

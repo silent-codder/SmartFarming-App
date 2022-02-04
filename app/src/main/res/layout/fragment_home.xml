@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginBottom="52dp"
+    tools:context=".Fragment.HomeFragment">
+
+    <ImageView
+        android:id="@+id/searchView"
+        android:layout_width="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_height="wrap_content"
+        android:inputType="textCapWords"
+        android:gravity="end"
+        android:src="@drawable/ic_search"
+        android:background="@drawable/search_bg"
+        android:padding="10dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="20dp"
+        android:queryHint="Search Snacks"/>
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:text="Find your"
+        android:textSize="18sp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/regular"
+        tools:ignore="HardcodedText" />
+    <TextView
+        android:id="@+id/text2"
+        android:visibility="visible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Products"
+        android:fontFamily="@font/candal"
+        android:layout_below="@id/text"
+        android:layout_marginStart="20dp"
+        android:textColor="@color/secondary"
+        android:textSize="19sp"
+        tools:ignore="HardcodedText" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_below="@id/text2"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/marquee"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:background="#E1F5FE"
+            android:visibility="gone"
+            android:textColor="@color/primary"
+            android:padding="5dp"
+            android:gravity="center"
+            android:fontFamily="@font/candal"
+            android:textStyle="bold"
+            android:ellipsize="marquee"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:fadingEdge="horizontal"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/categoryText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Categories"
+            android:layout_below="@+id/marquee"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="20dp"
+            android:fontFamily="@font/candal"
+            android:textColor="@color/regular"
+            tools:ignore="HardcodedText" />
+
+        <HorizontalScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:scrollbars="none"
+            android:layout_below="@id/categoryText">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/allCategory"
+                    android:layout_width="60dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="0dp"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:text="All"
+                    android:background="@drawable/all_cat_bg"
+                    android:padding="10dp"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/candal"
+                    tools:ignore="HardcodedText" />
+                <TextView
+                    android:id="@+id/Herbicide"
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="10dp"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:text="Herbicide"
+                    android:background="@drawable/cat_bg"
+                    android:layout_toRightOf="@id/allCategory"
+                    android:padding="10dp"
+                    android:textColor="@color/secondary"
+                    android:fontFamily="@font/candal"
+                    tools:ignore="HardcodedText" />
+                <TextView
+                    android:id="@+id/nutrient"
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="10dp"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:text="Plant Nutrients"
+                    android:background="@drawable/cat_bg"
+                    android:layout_toRightOf="@id/Herbicide"
+                    android:padding="10dp"
+                    android:textColor="@color/secondary"
+                    android:fontFamily="@font/candal"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/fungicides"
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="10dp"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:text="Fungicides"
+                    android:background="@drawable/cat_bg"
+                    android:layout_toRightOf="@id/nutrient"
+                    android:padding="10dp"
+                    android:textColor="@color/secondary"
+                    android:fontFamily="@font/candal"
+                    tools:ignore="HardcodedText" />
+                <TextView
+                    android:id="@+id/insecticides"
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="10dp"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:text="Insecticides"
+                    android:background="@drawable/cat_bg"
+                    android:layout_toRightOf="@id/fungicides"
+                    android:padding="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:textColor="@color/secondary"
+                    android:fontFamily="@font/candal"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/seeds"
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="0dp"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:text="Seeds"
+                    android:background="@drawable/cat_bg"
+                    android:layout_toRightOf="@id/insecticides"
+                    android:padding="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:textColor="@color/secondary"
+                    android:fontFamily="@font/candal"
+                    tools:ignore="HardcodedText" />
+
+            </RelativeLayout>
+
+        </HorizontalScrollView>
+
+        <TextView
+            android:id="@+id/popularText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Top Medicine"
+            android:layout_below="@+id/scrollView"
+            android:layout_marginTop="0dp"
+            android:layout_marginStart="20dp"
+            android:fontFamily="@font/candal"
+            android:textColor="@color/regular"
+            tools:ignore="HardcodedText" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/recycleView"
+            android:layout_below="@id/popularText"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/recycleView2"
+            android:layout_below="@id/popularText"/>
+
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

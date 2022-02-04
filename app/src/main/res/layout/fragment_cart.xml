@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginBottom="52dp"
+    tools:context=".Fragment.CartFragment">
+
+
+          <TextView
+              android:id="@+id/text"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="Your Cart"
+              android:fontFamily="@font/candal"
+              android:layout_centerHorizontal="true"
+              android:textSize="18sp"
+              android:layout_marginTop="10dp"
+              android:textColor="@color/secondary"
+              tools:ignore="HardcodedText" />
+    <TextView
+        android:id="@+id/btnClearCard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Clear Cart"
+        android:fontFamily="@font/candal"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        tools:ignore="HardcodedText" />
+
+          <ScrollView
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:id="@+id/scrollView"
+              android:layout_below="@id/text"
+              android:scrollbars="none"
+              android:layout_marginTop="3dp">
+
+              <RelativeLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content">
+
+                  <androidx.recyclerview.widget.RecyclerView
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:id="@+id/recycleView"/>
+                  <View
+                      android:id="@+id/view"
+                      android:layout_width="match_parent"
+                      android:layout_height="0.5dp"
+                      android:visibility="invisible"
+                      android:layout_marginStart="20dp"
+                      android:layout_marginEnd="20dp"
+                      android:background="@color/regular"
+                      android:layout_marginTop="5dp"
+                      android:layout_below="@id/recycleView"/>
+
+              </RelativeLayout>
+
+          </ScrollView>
+
+          <com.airbnb.lottie.LottieAnimationView
+              android:layout_width="wrap_content"
+              android:layout_height="250dp"
+              android:scaleType="fitCenter"
+              app:lottie_url="https://assets7.lottiefiles.com/private_files/lf30_oqpbtola.json"
+              app:lottie_autoPlay="true"
+              android:visibility="visible"
+              android:layout_centerHorizontal="true"
+              android:layout_centerVertical="true"
+              android:id="@+id/empty"/>
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:visibility="visible"
+              android:layout_centerHorizontal="true"
+              android:layout_below="@id/empty"
+              android:id="@+id/emptyTxt"
+              android:hint="Empty Cart"
+              android:fontFamily="@font/candal"
+              tools:ignore="HardcodedText" />
+    <Button
+        android:id="@+id/btnHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Products"
+        android:fontFamily="@font/candal"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/emptyTxt"
+        tools:ignore="HardcodedText" />
+
+
+    <Button
+        android:id="@+id/btnCheckout"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_width="match_parent"
+        android:textColor="@color/white"
+        android:layout_height="60dp"
+        android:textSize="17sp"
+        android:text="Checkout"
+        android:fontFamily="@font/candal"
+        android:textAllCaps="false"
+        tools:ignore="HardcodedText" />
+
+</RelativeLayout>

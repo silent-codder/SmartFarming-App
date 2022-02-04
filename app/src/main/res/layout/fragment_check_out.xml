@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="56dp"
+    tools:context=".Fragment.CheckOutFragment">
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Confirm Order"
+        android:fontFamily="@font/candal"
+        android:textSize="17sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20sp"
+        android:textColor="@color/secondary"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/addressText"
+        android:layout_marginTop="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text"
+        android:layout_marginStart="20dp"
+        android:hint="Delivery Address  "
+        android:fontFamily="@font/candal"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/regular"
+        android:id="@+id/address"
+        android:padding="15dp"
+        android:background="@drawable/edit_bg"
+        android:fontFamily="@font/candal"
+        android:gravity="start"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_below="@+id/addressText"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/btnEditAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Edit Address"
+        android:fontFamily="@font/candal"
+        android:layout_below="@id/address"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="20dp"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/paymentText"
+        android:visibility="visible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnEditAddress"
+        android:layout_marginStart="20dp"
+        android:hint="Payment Method "
+        android:fontFamily="@font/candal"
+        tools:ignore="HardcodedText" />
+
+   <RadioButton
+       android:id="@+id/cod"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="Cash On Delivery"
+       android:fontFamily="@font/candal"
+       android:checked="true"
+       android:textColor="@color/regular"
+       android:layout_marginStart="20dp"
+       android:layout_below="@id/paymentText"
+       tools:ignore="HardcodedText" />
+    <RadioButton
+        android:id="@+id/upi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-20dp"
+        android:hint="UPI"
+        android:fontFamily="@font/candal"
+        android:checked="false"
+        android:clickable="false"
+        android:textColor="@color/regular"
+        android:layout_marginStart="20dp"
+        android:layout_below="@id/cod"
+        tools:ignore="HardcodedText" />
+    <RadioButton
+        android:id="@+id/netBanking"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-20dp"
+        android:hint="Net Banking"
+        android:fontFamily="@font/candal"
+        android:checked="false"
+        android:clickable="false"
+        android:textColor="@color/regular"
+        android:layout_marginStart="20dp"
+        android:layout_below="@id/upi"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/note"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Note : Your order delivered in 1-2 days"
+        android:fontFamily="@font/candal"
+        android:layout_below="@id/netBanking"
+        android:layout_centerHorizontal="true"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/btnPlaceOrder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:layout_below="@id/note"
+        android:text="Placed Order"
+        android:textColor="@color/white"
+        android:fontFamily="@font/candal"
+        android:textAllCaps="false"
+        tools:ignore="HardcodedText" />
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/note"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/loader"
+        android:visibility="gone"/>
+
+</RelativeLayout>

@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="56dp"
+    tools:context=".Fragment.ConfirmOrderFragment">
+
+   <TextView
+       android:id="@+id/btnEditCard"
+       android:layout_marginStart="10dp"
+       android:layout_marginTop="10dp"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:textColor="@color/regular"
+       android:paddingEnd="10dp"
+       android:paddingTop="3dp"
+       android:paddingBottom="3dp"
+       android:paddingStart="10dp"
+       android:gravity="center_horizontal"
+       android:text="Edit Card"
+       android:textSize="17sp"
+       android:fontFamily="@font/candal"
+       android:drawableStart="@drawable/ic_arrow_back"
+       tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Product Info"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="30dp"
+        android:fontFamily="@font/candal"
+        android:layout_below="@id/btnEditCard"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Qyt"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="30dp"
+        android:fontFamily="@font/candal"
+        android:layout_below="@id/btnEditCard"
+        tools:ignore="HardcodedText" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text"
+        android:layout_marginTop="10dp"
+        android:id="@+id/recycleView"/>
+
+    <RelativeLayout
+        android:id="@+id/checkbox"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="3dp"
+        android:background="@drawable/search_bg">
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            android:id="@+id/radioGrp">
+
+            <RadioButton
+                android:id="@+id/homeDelivery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Home Delivery"
+                android:fontFamily="@font/candal"
+                tools:ignore="HardcodedText" />
+
+            <RadioButton
+                android:id="@+id/selfPickup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Self Pickup"
+                android:checked="true"
+                android:layout_marginStart="20dp"
+                android:fontFamily="@font/candal"
+                tools:ignore="HardcodedText" />
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/deliveryText"
+            android:layout_below="@id/radioGrp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Delivery Charge :"
+            android:fontFamily="@font/candal"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/deliveryCharge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="₹ 50"
+            android:layout_below="@id/radioGrp"
+            android:text="Free"
+            android:textColor="@color/regular"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/candal"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/subTotalText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Sub Total Price :"
+            android:fontFamily="@font/candal"
+            android:layout_below="@id/deliveryText"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/subTotalPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="₹ 500"
+            android:textColor="@color/regular"
+            android:fontFamily="@font/candal"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="20dp"
+            android:layout_below="@id/deliveryCharge"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="35dp"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/extraText"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Est. Tax :"
+            android:layout_below="@id/subTotalText"
+            android:fontFamily="@font/candal"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/taxCharge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:text="₹ 50"
+            android:layout_below="@id/subTotalPrice"
+            android:textColor="@color/regular"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/candal"
+            tools:ignore="HardcodedText" />
+        <TextView
+            android:id="@+id/totalText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Total Price :"
+            android:fontFamily="@font/candal"
+            android:layout_below="@id/extraText"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/totalPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="₹ 500"
+            android:textColor="@color/secondary"
+            android:fontFamily="@font/candal"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="20dp"
+            android:textSize="18sp"
+            android:layout_below="@id/taxCharge"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="35dp"
+            tools:ignore="HardcodedText" />
+
+        <Button
+            android:id="@+id/btnOrderNow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Order Now"
+            android:fontFamily="@font/candal"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/totalText"
+            android:layout_centerHorizontal="true"
+            android:layout_marginEnd="20sp"
+            tools:ignore="HardcodedText" />
+        <ProgressBar
+            android:id="@+id/loader"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/totalText"
+            android:layout_marginTop="10dp"/>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

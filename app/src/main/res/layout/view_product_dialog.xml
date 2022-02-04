@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="320dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_gravity="center"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="10dp"
+    android:elevation="5dp"
+    app:contentPadding="15dp"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="120dp"
+            android:layout_centerHorizontal="true"/>
+
+        <ImageView
+            android:id="@+id/productImg"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_below="@id/productWeight"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:id="@+id/productName"
+            android:gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Loading.."
+            android:textStyle="bold"
+            android:fontFamily="@font/candal"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:textSize="20sp"
+            android:textColor="@color/secondary" />
+        <TextView
+            android:id="@+id/productPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:fontFamily="@font/candal"
+            android:textSize="25sp"
+            android:textColor="@color/primary"
+            android:layout_below="@id/productImg"
+            android:layout_marginTop="2dp"
+            android:layout_centerHorizontal="true"
+            tools:ignore="HardcodedText" />
+        <TextView
+            android:id="@+id/productWeight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="loading.."
+            android:gravity="center_horizontal"
+            android:layout_below="@id/productName"
+            android:layout_marginTop="1dp"
+            android:layout_centerHorizontal="true"
+            android:textSize="13sp"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/candal"
+            android:textColor="@color/regular" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/productPrice"
+            android:gravity="end">
+
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_minus"
+                android:layout_toLeftOf="@id/count"
+                android:id="@+id/btnMinus"/>
+            <TextView
+                android:id="@+id/count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1"
+                android:layout_marginEnd="5dp"
+                android:textColor="@color/secondary"
+                android:textSize="27sp"
+                android:fontFamily="@font/candal"
+                android:layout_toLeftOf="@id/btnAdd"
+                android:layout_marginStart="15dp"
+                tools:ignore="HardcodedText" />
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_add"
+                android:layout_marginStart="10dp"
+                android:layout_alignParentRight="true"
+                android:id="@+id/btnAdd"/>
+
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="₹"
+                android:textColor="@color/secondary"
+                android:fontFamily="@font/candal"
+                android:textSize="20sp"
+                android:layout_marginStart="30dp"
+                tools:ignore="HardcodedText" />
+            <TextView
+                android:id="@+id/PriceCount"
+                android:layout_toRightOf="@id/text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/secondary"
+                android:fontFamily="@font/candal"
+                android:textSize="20sp"
+                android:layout_marginStart="3dp"
+                tools:ignore="HardcodedText" />
+            <TextView
+                android:id="@+id/Count"
+                android:layout_toRightOf="@id/PriceCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="x 1"
+                android:layout_marginTop="3dp"
+                android:fontFamily="@font/candal"
+                android:textSize="16sp"
+                android:layout_marginStart="3dp"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/priceCount"
+                android:layout_marginStart="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:layout_below="@id/PriceCount"
+                android:textColor="@color/secondary"
+                android:fontFamily="@font/candal"
+                android:textSize="25sp"
+                android:background="@drawable/search_bg"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:layout_marginTop="10dp"
+                tools:ignore="HardcodedText" />
+
+            <Button
+                android:id="@+id/btnAddCard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add to card"
+                android:textColor="@color/white"
+                android:layout_below="@id/count"
+                android:layout_alignParentRight="true"
+                android:fontFamily="@font/candal" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

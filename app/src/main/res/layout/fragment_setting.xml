@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginBottom="52dp"
+    tools:context=".Fragment.SettingFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp">
+
+            <ProgressBar
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:indeterminateTint="#E1F5FE"/>
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profileImg"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                app:civ_border_width="1dp"
+                app:civ_border_color="@color/secondary"
+                android:src="@drawable/profile_img"/>
+            <TextView
+                android:id="@+id/userName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="loading.."
+                android:textSize="18sp"
+                android:textColor="@color/secondary"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/candal"
+                android:layout_toEndOf="@id/profileImg"
+                tools:ignore="HardcodedText" />
+            <TextView
+                android:id="@+id/mobileNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:hint="loading.."
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/candal"
+                android:layout_toEndOf="@id/profileImg"
+                android:layout_below="@id/userName"
+                tools:ignore="HardcodedText" />
+            <Button
+                android:id="@+id/btnEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Edit"
+                android:fontFamily="@font/candal"
+                android:textColor="@color/white"
+                android:layout_alignParentRight="true"
+                tools:ignore="HardcodedText" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/secondary"
+                android:layout_below="@id/profileImg"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:id="@+id/address"
+                android:textSize="17sp"
+                android:drawableStart="@drawable/location"
+                android:textColor="@color/regular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="  Address"
+                android:fontFamily="@font/candal"
+                android:layout_below="@id/view"
+                android:layout_marginTop="30dp"
+                tools:ignore="HardcodedText" />
+            <TextView
+                android:id="@+id/orderHistory"
+                android:textSize="17sp"
+                android:drawableStart="@drawable/history"
+                android:textColor="@color/regular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="  Order History"
+                android:fontFamily="@font/candal"
+                android:layout_below="@id/address"
+                android:layout_marginTop="10dp"
+                tools:ignore="HardcodedText" />
+            <TextView
+                android:id="@+id/promoCode"
+                android:drawableStart="@drawable/redeem"
+                android:textSize="17sp"
+                android:visibility="gone"
+                android:textColor="@color/regular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="  Enter Promo Code"
+                android:fontFamily="@font/candal"
+                android:layout_below="@id/orderHistory"
+                android:layout_marginTop="10dp"
+                tools:ignore="HardcodedText" />
+            <TextView
+                android:id="@+id/setting"
+                android:textSize="17sp"
+                android:visibility="gone"
+                android:drawableStart="@drawable/setting_menu"
+                android:textColor="@color/regular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="  Setting"
+                android:fontFamily="@font/candal"
+                android:layout_below="@id/promoCode"
+                android:layout_marginTop="10dp"
+                tools:ignore="HardcodedText" />
+            <TextView
+                android:id="@+id/faqs"
+                android:textSize="17sp"
+                android:drawableStart="@drawable/question"
+                android:textColor="@color/regular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="  FAQS"
+                android:fontFamily="@font/candal"
+                android:layout_below="@id/setting"
+                android:layout_marginTop="10dp"
+                tools:ignore="HardcodedText" />
+            <TextView
+                android:id="@+id/support"
+                android:textSize="17sp"
+                android:drawableStart="@drawable/support"
+                android:textColor="@color/regular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="  Support"
+                android:fontFamily="@font/candal"
+                android:layout_below="@id/faqs"
+                android:layout_marginTop="10dp"
+                tools:ignore="HardcodedText" />
+            <TextView
+                android:id="@+id/about"
+                android:textSize="17sp"
+                android:drawableStart="@drawable/info"
+                android:textColor="@color/regular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="  About Us"
+                android:fontFamily="@font/candal"
+                android:layout_below="@id/support"
+                android:layout_marginTop="10dp"
+                tools:ignore="HardcodedText" />
+            <TextView
+                android:id="@+id/logOut"
+                android:textSize="17sp"
+                android:drawableStart="@drawable/logout"
+                android:textColor="@color/regular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="  Log Out"
+                android:fontFamily="@font/candal"
+                android:layout_below="@id/about"
+                android:layout_marginTop="10dp"
+                tools:ignore="HardcodedText" />
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/lottie"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                app:lottie_rawRes="@raw/seedling"
+                android:layout_marginTop="10dp"
+                app:lottie_autoPlay="true"
+                android:layout_below="@id/logOut"/>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

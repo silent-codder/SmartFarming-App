@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="52dp"
+    tools:context=".Fragment.OrderHistoryViewFragment">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/recycleView"
+        android:layout_above="@id/btnCancelOrder"
+        android:layout_marginTop="0dp"/>
+    <TextView
+        android:id="@+id/btnCancelOrder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:padding="10dp"
+        android:background="@drawable/cancel_btn_bg"
+        android:textColor="@color/white"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:fontFamily="@font/candal"
+        android:text="Cancel Order"
+        tools:ignore="HardcodedText" />
+
+</RelativeLayout>

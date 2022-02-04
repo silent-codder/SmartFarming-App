@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginBottom="56dp"
+    tools:context=".Fragment.OrderHistoryFragment">
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Order History"
+        android:fontFamily="@font/candal"
+        android:textSize="17sp"
+        android:textColor="@color/secondary"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20sp"
+        tools:ignore="HardcodedText" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text"
+        android:id="@+id/recycleView"/>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/empty"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        app:lottie_rawRes="@raw/empty"
+        app:lottie_autoPlay="true"/>
+    <TextView
+        android:id="@+id/emptyTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Yet not order !!"
+        android:fontFamily="@font/candal"
+        android:layout_below="@id/empty"
+        android:layout_centerHorizontal="true"
+        tools:ignore="HardcodedText" />
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/filter"
+        android:text="Filter"
+        android:fontFamily="@font/candal"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:backgroundTint="@color/secondary"
+        android:layout_centerHorizontal="true"
+        android:drawableLeft="@drawable/ic_baseline_filter_list_24"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="20dp"
+        tools:ignore="HardcodedText" />
+    
+</RelativeLayout>
